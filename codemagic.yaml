@@ -10,12 +10,7 @@ workflows:
       cache_paths:
         - ~/.gradle/caches
     scripts:
-  - name: Install Gradle 9.3.1
-    script: |
-      wget https://services.gradle.org/distributions/gradle-9.3.1-bin.zip
-      unzip gradle-9.3.1-bin.zip
-      export PATH=$PWD/gradle-9.3.1/bin:$PATH
-  - name: Build Android Debug APK
-    script: gradle assembleDebug
+      - name: Build APK
+        script: gradle assembleDebug
     artifacts:
       - app/build/outputs/apk/**/*.apk
