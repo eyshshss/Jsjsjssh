@@ -11,8 +11,6 @@ workflows:
         - ~/.gradle/caches
     scripts:
       - name: Build Android Debug APK
-        script: |
-          chmod +x gradlew
-          ./gradlew assembleDebug
+        script: gradle assembleDebug
     artifacts:
       - app/build/outputs/apk/**/*.apk
