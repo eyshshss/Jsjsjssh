@@ -5,6 +5,10 @@ workflows:
     environment:
       vars:
         PACKAGE_NAME: "com.example.smartmailer"
+      java: 17
+    cache:
+      cache_paths:
+        - ~/.gradle/caches
     scripts:
       - name: Build Android Debug APK
         script: |
